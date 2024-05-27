@@ -29,11 +29,6 @@ cleanup() {
 trap cleanup EXIT
 
 echo "Creating temporary virtualenv at $venv_dir using $(python3 --version)"
-python3 -m venv $venv_dir
-source $venv_dir/bin/activate
-python -m pip install \
-    -c $repo_root/gen-requirements.txt \
-    grpcio-tools mypy-protobuf
 echo 'python -m grpc_tools.protoc --version'
 python -m grpc_tools.protoc --version
 

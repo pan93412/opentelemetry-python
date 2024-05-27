@@ -21,6 +21,10 @@ log_cli = true
 
 [tool.rye]
 virtual = true
+dev-dependencies = [
+    "grpcio-tools>=1.64.0",
+    "mypy-protobuf>=3.6.0",
+]
 
 [tool.rye.workspace]
 members = ["opentelemetry-api", "exporter/*", "opentelemetry-proto", "opentelemetry-sdk",
