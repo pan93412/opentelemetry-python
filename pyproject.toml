@@ -18,3 +18,14 @@ exclude = '''
 [tool.pytest.ini_options]
 addopts = "-rs -v"
 log_cli = true
+
+[tool.rye]
+virtual = true
+
+[tool.rye.workspace]
+members = ["opentelemetry-api", "exporter/*", "opentelemetry-proto", "opentelemetry-sdk",
+           "opentelemetry-semantic-conventions", "propagator/*", "shim/*"]
+
+[project]
+name = "opentelemetry-python"
+version = "0.0.1"
